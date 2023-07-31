@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Employee Registration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+    <div id="SecondDiv">
+            <form action="/">
+                <input class="btn btn-primary btn-sm" style="text-align :left;" type="submit" value=" Back">
+            </form>
+	</div>
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>Employee Registration</h1>
+		<center><h3 style="color:red">{{msg}}</h3></center>
+
+		<div class="main-agileinfo">
+
+			<div class="agileits-top">
+				<form action="" method="POST">
+
+					{% csrf_token %}
+
+					<div class="form-group">
+    					<label for="exampleInputName">Name</label>
+    					<input type="text" class="form-control" name="fullname" id="exampleInputName" required>
+  					</div>
+
+					<div class="form-group">
+    					<label for="exampleInputEmail">Email</label>
+    					<input type="text" class="form-control" name="email" id="exampleInputEmail" required>
+					</div>
+
+					<div class="form-group">
+						<label for="inputmobile">Contact</label>
+    					<input type="text" class="form-control" name="contact" minlength="10" maxlength="10" id="inputMobile" required>
+  					</div>
+
+					<div class="form-group">
+    					<label for="exampleInputPassword1">Password</label>
+    					<input type="password" class="form-control" name="password" minlength="3" id="exampleInputPassword1" required>
+  					</div>
+
+					<div class="form-group">
+    					<label for="exampleInputPassword2">Confirm Password</label>
+    					<input type="password" class="form-control" name="cpassword" minlength="3" id="exampleInputPassword2" required>
+  					</div>
+
+					<input type="submit" value="SIGN UP">
+				</form>
+					<p>Don't have an Account? <a href="myapp/log.html"> Login Now!</a></p>
+		</div>
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+	</div>
+</body>
+</html>
